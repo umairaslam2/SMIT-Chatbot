@@ -1,0 +1,116 @@
+@media (width <= 1000px) {
+    .userInputContent,
+    .chatContent {
+      width: 85%;
+    }
+    .user,
+    .ChatBot {
+      padding: 5px 10px;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  
+    .userInput {
+      font-size: 2rem;
+    }
+    .ChatBot::after,
+    .user::after {
+      font-size: 2rem;
+      width: 35px;
+      height: 35px;
+    }
+    .ChatBot::after {
+      left: -50px;
+    }
+    .user::after {
+      right: -50px;
+      content: "\f007";
+    }
+  
+    .btn {
+      font-size: 2rem;
+      padding: 5px 10px;
+    }
+    
+  }
+  
+  @media (width<= 940px) {
+    .userInputContent,
+    .chatContent {
+      width: 80%;
+    }
+  }
+  
+  @media (width <= 850px) {
+    .header {
+      padding: 10px;
+    }
+  
+    .logo,
+    .dp {
+      font-size: 2rem;
+    }
+  
+    .userInputContent {
+      width: 90%;
+    }
+  }
+  
+  @media (width <= 690px) {
+    .userInputContainer {
+      height: 55px;
+    }
+    .userInputContent {
+      padding: 5px 10px;
+    }
+  }
+  
+  @media (width <= 650px) {
+    .header {
+      padding: 10px;
+    }
+  
+    .logo,
+    .dp {
+      font-size: 2rem;
+    }
+  
+    .chatContent {
+      width: 95%;
+    }
+  
+    .user,
+    .ChatBot {
+      max-width: 100%;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      font-size: 1.7rem;
+      padding: 5px 10px;
+    }
+    .ChatBot::after,
+    .user::after {
+      display: none;
+    }
+  }
+  
+  @media (width <= 485px) {
+    .userInputContent {
+      width: 95%;
+    }
+    .userInput {
+      margin-inline: 10px;
+    }
+  }
+  
+  @media (width <= 405px) {
+    .mobileUserInput {
+      display: block;
+    }
+    .laptopUserInput {
+      display: none;
+    }
+  }
+  

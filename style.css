@@ -1,0 +1,272 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: "Jost", sans-serif;
+    list-style: none;
+    text-transform: capitalize;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  .main-container,
+  .userInputContainer {
+    width: 100%;
+    max-width: 1440px;
+  }
+  .section {
+    padding: 2rem 5rem;
+  }
+  
+  /*!========== website theme ==========*/
+  
+  :root {
+    --mainColor1: purple;
+    --mainColor2: #e7e6e6;
+    --black: #000;
+    --white: #fff;
+  }
+  
+  /*!========== ReuseAble Code ==========*/
+  
+  /*todo===== all flex properties =====*/
+  
+  .d-flex {
+    display: flex;
+  }
+  
+  /*?=== justify content properties ===*/
+  
+  .jc-center {
+    justify-content: center;
+  }
+  
+  .jc-between {
+    justify-content: space-between;
+  }
+  
+  /*?=== aling items properties ===*/
+  
+  .al-center {
+    align-items: center;
+  }
+  
+  /*?=== flex directions properties ===*/
+  
+  .dir-col {
+    flex-direction: column;
+  }
+  
+  .m-auto {
+    margin: auto;
+  }
+  .radius-50per {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  
+  .d-none {
+    display: none;
+  }
+  /*!========== drop up css ==========*/
+  .drop-up {
+    bottom: 3%;
+    right: 4%;
+  }
+  .drop-up a i {
+    font-size: 2.5rem;
+    width: 5rem;
+    height: 5rem;
+    color: var(--black);
+    animation-name: border-animation;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 2.5s;
+  }
+  @keyframes border-animation {
+    0%,
+    100% {
+      border-radius: 76% 24% 58% 42%/17% 76% 24% 83%;
+      -webkit-border-radius: 76% 24% 58% 42%/17% 76% 24% 83%;
+      -moz-border-radius: 76% 24% 58% 42%/17% 76% 24% 83%;
+      -ms-border-radius: 76% 24% 58% 42%/17% 76% 24% 83%;
+      -o-border-radius: 76% 24% 58% 42%/17% 76% 24% 83%;
+    }
+    50% {
+      border-radius: 30%70%70%30%/30%30%70%70%;
+      -webkit-border-radius: 30%70%70%30%/30%30%70%70%;
+      -moz-border-radius: 30%70%70%30%/30%30%70%70%;
+      -ms-border-radius: 30%70%70%30%/30%30%70%70%;
+      -o-border-radius: 30%70%70%30%/30%30%70%70%;
+      -webkit-border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+    }
+  }
+  
+  /*!========== main css ==========*/
+  
+  .header {
+    clear: both;
+  }
+  
+  .header,
+  .user {
+    background-color: var(--mainColor1);
+    color: var(--white);
+  }
+  
+  .logo{
+    font-size: 3rem;
+    text-align: center;
+    
+
+  }
+  
+  .chatContent {
+    margin-top: 20px;
+    width: 60%;
+    margin-bottom: 65px;
+  }
+  .chatContent::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .user,
+  .ChatBot {
+    padding: 10px 20px;
+    font-size: 3rem;
+    width: fit-content;
+    max-width: 70%;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .btnForChoice {
+    margin-bottom: 10px;
+  }
+  .user {
+    text-align: right;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    align-self: end;
+    padding-right: 40px;
+  }
+  
+  .ChatBot {
+    padding-left: 40px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: var(--mainColor2);
+  }
+  
+  .ChatBot::after,
+  .user::after {
+    content: "\f544";
+    position: absolute;
+    top: 0%;
+    font-family: "Font Awesome 6 Free";
+    font-size: 3rem;
+    font-weight: 900;
+    width: 55px;
+    height: 55px;
+    color: var(--mainColor1);
+    border: 1px solid var(--mainColor1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ChatBot::after,
+  .user::after,
+  .userInputContent .sendBtn {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  
+  .ChatBot::after {
+    left: -80px;
+  }
+  .user::after {
+    right: -80px;
+    content: "\f007";
+  }
+  
+  .userInputContainer {
+    position: fixed;
+    bottom: 0%;
+    left: 50%;
+    height: 65px;
+    width: 100%;
+    transform: translate(-50%);
+    background-color: var(--white);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+  }
+  .userInputContent {
+    width: 65%;
+    background-color: #e7e6e6;
+    font-size: 2.5rem;
+    padding: 10px 20px;
+    height: fit-content;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+  }
+  
+  .userInput {
+    font-size: 2.5rem;
+    background-color: transparent;
+    width: 95%;
+    border: none;
+    outline: none;
+    margin-inline: 20px;
+  }
+  .userInput::placeholder {
+    color: rgb(84, 84, 84);
+  }
+  
+  .userInputContent i {
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  
+  .userInputContent > .sendBtn {
+    background-color: #ccc;
+    width: 40px;
+    height: 35px;
+  }
+  .loadingImg {
+    display: none;
+    height: 30px;
+  }
+  
+  .btn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border: 2px solid var(--mainColor1);
+    color: var(--mainColor1);
+    background-color: transparent;
+    font-size: 3rem;
+    padding: 5px 10px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    width: fit-content;
+    margin: 2px;
+  }
+  
